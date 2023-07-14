@@ -1,13 +1,13 @@
 const express = require('express');
 const app = express();
 
-const cookieParser = require("cookie-parser");
+const cookieParser = require("cookie-parser");//---
 
 const db = require("./config/mongoose");
 
-const session = require("express-session");
+const session = require("express-session");//---
 //get mongostore config
-const MongoStore = require("connect-mongo")(session);
+const MongoStore = require("connect-mongo")(session);//---
 
 
 //mongo store is being used to store session cookie in db
@@ -34,8 +34,8 @@ app.use(
   })
 );
 
-app.use(cookieParser());
-app.use(express.urlencoded({extended:false}));
+app.use(cookieParser());//---
+app.use(express.urlencoded({extended:false}));//---
 
 // Set up your routes and middleware here
 // let middleware handle initial routing
